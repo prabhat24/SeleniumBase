@@ -4210,7 +4210,7 @@ class BaseCase(unittest.TestCase):
         if self.timeout_multiplier and timeout == settings.EXTREME_TIMEOUT:
             timeout = self.__get_new_timeout(timeout)
         js_utils.wait_for_ready_state_complete(self.driver, timeout)
-        self.wait_for_angularjs(timeout=settings.MINI_TIMEOUT)
+        # self.wait_for_angularjs(timeout=settings.MINI_TIMEOUT)
         if self.js_checking_on:
             self.assert_no_js_errors()
         self.__ad_block_as_needed()
